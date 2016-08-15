@@ -1,7 +1,7 @@
 /*
 Theme Name: portfolio
 Theme URI: http://underscores.me/
-Author: Underscores.me
+Author: Juremy
 Author URI: http://underscores.me/
 Description: Description
 Version: 1.0.0
@@ -54,6 +54,7 @@ html {
 
 body {
 	margin: 0;
+	padding: 0;
 }
 
 article,
@@ -68,7 +69,7 @@ menu,
 nav,
 section,
 summary {
-	display: block;
+	display: inline;
 }
 
 audio,
@@ -532,27 +533,34 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size:1em;
 }
 
 .main-navigation ul {
-	display: none;
+	display: inline;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	text-align: center;
+	background-color: #00cc88;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+
 }
 
 .main-navigation li {
-	float: left;
-	position: relative;
+	display: inline;
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .main-navigation a {
-	display: block;
+	display: inline;
 	text-decoration: none;
+	color:white;
 }
 
 .main-navigation ul ul {
@@ -574,7 +582,6 @@ a:active {
 }
 
 .main-navigation ul ul li {
-
 }
 
 .main-navigation li:hover > a,
@@ -728,6 +735,7 @@ a:active {
 .site-content:after,
 .site-footer:after {
 	clear: both;
+	table-layout: fixed;
 }
 
 /*--------------------------------------------------------------
@@ -892,3 +900,54 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/* My CSS Customizations */
+#page {
+	background-color: #FFFFFF;
+}
+
+.site-branding {
+	text-align: center;
+	color: black;
+}
+.site-branding img{
+	margin-top: 20px;
+	height: 200px; 
+	width: 200px;
+}
+
+#colophon {
+	padding-top: 20px;
+	background-color: #00cc88;
+
+}
+
+.site-info {
+	background-color: #00cc88;
+	padding-top:50px;
+	padding-bottom: 50px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+#primary {
+	float:left;
+	max-width: 55%;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 20px;
+}
+
+#secondary {
+    float: right;
+    padding: 0 0 0 20px;
+    max-width: 30%;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 100px;
+    margin-right: 20px;
+
+}
+
+
