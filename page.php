@@ -12,7 +12,21 @@
  * @package portfolio
  */
 
+$options=get_option( 'js_options_settings' ); 
+
 get_header(); ?>
+
+     <style>
+        .site-main {
+	       color: <?php echo $options['js_radio_field']; ?>
+        }
+    </style>
+
+    <style>
+        .site-main{
+	       font-size: <?php echo $options['js_select_field2']; ?>
+        }
+    </style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
