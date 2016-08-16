@@ -17,94 +17,75 @@ function js_settings_init() {
 	);
 
 	function js_options_page_section_callback() { 
-		echo 'In the section below, choose the settings you would like to see display on your website pages.';
+		echo 'In the section below, choose the settings you would like to display on your web page.';
 	}
 
 	add_settings_field( 
-		'js_text_field', 
-		'Enter your text', 
-		'js_text_field_render', 
-		'theme_options', 
-		'js_options_page_section' 
-	);
-
-	add_settings_field( 
-		'js_checkbox_field', 
-		'Check your preference', 
-		'js_checkbox_field_render', 
+		'js_select_field', 
+		'Choose font size for title', 
+		'js_select_field_render', 
 		'theme_options', 
 		'js_options_page_section'  
 	);
 
 	add_settings_field( 
 		'js_radio_field', 
-		'Choose font size', 
+		'Choose a font colour for page content', 
 		'js_radio_field_render', 
 		'theme_options', 
 		'js_options_page_section'  
 	);
-	
+
 	add_settings_field( 
-		'js_textarea_field', 
-		'Enter content in the textarea', 
-		'js_textarea_field_render', 
-		'theme_options', 
-		'js_options_page_section'  
-	);
-	
-	add_settings_field( 
-		'js_select_field', 
-		'Choose font colour', 
+		'js_select_field2', 
+		'Choose font size for page content', 
 		'js_select_field_render', 
 		'theme_options', 
 		'js_options_page_section'  
 	);
 
-	function js_text_field_render() { 
-		$options = get_option( 'js_options_settings' );
-		?>
-		<input type="text" name="js_options_settings[js_text_field]" value="<?php if (isset($options['js_text_field'])) echo $options['js_text_field']; ?>" />
-		<?php
-	}
-	
-	function js_checkbox_field_render() { 
-		$options = get_option( 'js_options_settings' );
-	?>
-		<input type="checkbox" name="js_options_settings[js_checkbox_field]" <?php if (isset($options['js_checkbox_field'])) checked( 'on', ($options['js_checkbox_field']) ) ; ?> value="on" />
-		<label>Turn it On</label> 
-		<?php	
-	}
-	
-	function js_radio_field_render() { 
-		$options = get_option( 'js_options_settings' );
-		?>
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 1 ); ?> value="1" /> <label>1em</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 2 ); ?> value="2" /> <label>2em</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 3 ); ?> value="3" /> <label>3em</label>
-		<?php
-	}
-	
-	function js_textarea_field_render() { 
-		$options = get_option( 'js_options_settings' );
-		?>
-		<textarea cols="40" rows="5" name="js_options_settings[js_textarea_field]"><?php if (isset($options['js_textarea_field'])) echo $options['js_textarea_field']; ?></textarea>
-		<?php
-	}
-
-//Option 1: Change Font Colour
+//Option 1: Change Font Size For Title
 
 	function js_select_field_render() { 
 		$options = get_option( 'js_options_settings' );
 		?>
 		<select name="js_options_settings[js_select_field]">
-			<option value="1" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 1 ); ?>>Black</option>
-			<option value="2" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 2 ); ?>>Blue</option>
-			<option value="3" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 3 ); ?>>Orange</option>
-			<option value="4" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 4 ); ?>>Red</option>
-			<option value="5" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 5 ); ?>>Purple</option>
+			<option value="0.5em" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 1 ); ?>>Extra Small</option>
+			<option value="1em" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 2 ); ?>>Small (Default)</option>
+			<option value="1.5em" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 3 ); ?>>Medium</option>
+			<option value="2.0em" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 4 ); ?>>Large</option>
+			<option value="2.5em" <?php if (isset($options['js_select_field'])) selected( $options['js_select_field'], 5 ); ?>>Extra Large</option>
 		</select>
 	<?php
 	}
+
+//Option 2: Change Font Color For Page Content
+
+	function js_radio_field_render() { 
+		$options = get_option( 'js_options_settings' );
+		?>
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 1 ); ?> value="#000000" /> <label>Black (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<?php
+	}
+
+//Option 3: Add Custom Font For Page Content
+
+	function js_select_field_render() { 
+		$options = get_option( 'js_options_settings' );
+		?>
+		<select name="js_options_settings[js_select_field]">
+			<option value="0.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 1 ); ?>>Extra Small</option>
+			<option value="1em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 2 ); ?>>Small (Default)</option>
+			<option value="1.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 3 ); ?>>Medium</option>
+			<option value="2.0em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 4 ); ?>>Large</option>
+			<option value="2.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 5 ); ?>>Extra Large</option>
+		</select>
+	<?php
+	}
+
 
 	function my_theme_options_page(){ 
 		?>
@@ -122,14 +103,4 @@ function js_settings_init() {
 }
 
 add_action( 'admin_init', 'js_settings_init' );
-
-//Option 1: Change Profile Image
-
-//Option 2: Change Menu Style Form Inline to Hamburger
-
-//Option 3: Add Profile Picture
-
-//Option 4: Change the social media links to their own
-
-//Change colour
 
