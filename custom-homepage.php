@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template name: custom-homepage
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -56,6 +56,25 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+<div class='custom-hp'>
+	<h2>Top Posts</h2>
+<!-- Adding my custom query --> <?php
+			$args = array('showposts' => 3, 'category_name' => 'custom-homepage');
+				$my_query = new WP_Query($args);
+				?>
+				<?php
+				//	This query shows posts
+				if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+				?>
+				<div class="customq">
+				<?php
+				if ( has_post_thumbnail()){ the_post_thumbnail(); }
+				the_excerpt(); //displays excerpts
+					?>
+				</div>
+				<?php endwhile; endif; wp_reset_query(); ?>
+</div> 
 
 <?php
 get_sidebar();
