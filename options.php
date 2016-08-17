@@ -21,6 +21,14 @@ function js_settings_init() {
 	}
 
 	add_settings_field( 
+		'js_radio_field2', 
+		'Choose a font colour for title', 
+		'js_radio_field_render2', 
+		'theme_options', 
+		'js_options_page_section'  
+	);
+
+	add_settings_field( 
 		'js_select_field', 
 		'Choose font size for title', 
 		'js_select_field_render', 
@@ -39,12 +47,32 @@ function js_settings_init() {
 	add_settings_field( 
 		'js_select_field2', 
 		'Choose font size for page content', 
-		'js_select_field_render', 
+		'js_select_field_render2', 
 		'theme_options', 
 		'js_options_page_section'  
 	);
 
-//Option 1: Change Font Size For Title
+		add_settings_field( 
+		'js_radio_field3', 
+		'Choose a background colour for content area', 
+		'js_radio_field_render3', 
+		'theme_options', 
+		'js_options_page_section'  
+	);
+
+//Option 1: Change Font Color For Title
+
+	function js_radio_field_render2() { 
+		$options = get_option( 'js_options_settings' );
+		?>
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 1 ); ?> value="#000000" /> <label>Black (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<?php
+	}
+
+//Option 2: Change Font Size For Title
 
 	function js_select_field_render() { 
 		$options = get_option( 'js_options_settings' );
@@ -59,7 +87,7 @@ function js_settings_init() {
 	<?php
 	}
 
-//Option 2: Change Font Color For Page Content
+//Option 3: Change Font Color For Page Content
 
 	function js_radio_field_render() { 
 		$options = get_option( 'js_options_settings' );
@@ -71,12 +99,12 @@ function js_settings_init() {
 		<?php
 	}
 
-//Option 3: Add Custom Font For Page Content
+//Option 4: Add Custom Font For Page Content
 
-	function js_select_field_render() { 
+	function js_select_field_render2() { 
 		$options = get_option( 'js_options_settings' );
 		?>
-		<select name="js_options_settings[js_select_field]">
+		<select name="js_options_settings[js_select_field2]">
 			<option value="0.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 1 ); ?>>Extra Small</option>
 			<option value="1em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 2 ); ?>>Small (Default)</option>
 			<option value="1.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 3 ); ?>>Medium</option>
@@ -84,6 +112,18 @@ function js_settings_init() {
 			<option value="2.5em" <?php if (isset($options['js_select_field2'])) selected( $options['js_select_field2'], 5 ); ?>>Extra Large</option>
 		</select>
 	<?php
+	}
+
+//Option 5: Change Background Colour For Page Content
+
+	function js_radio_field_render3() { 
+		$options = get_option( 'js_options_settings' );
+		?>
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 1 ); ?> value="#FFFFFF" /> <label>White (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<?php
 	}
 
 

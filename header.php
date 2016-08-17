@@ -19,12 +19,22 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!--Linking page to the options page so we can grab information from the setting-->
 <?php $options=get_option( 'js_options_settings' ); ?>
+
 <?php wp_head(); ?>
+
+<!-- In the below style I changed the color and font size to reflect the option the user chooses from the option page on wordpress-->
 
     <style>
         .site-branding{
 	       font-size: <?php echo $options['js_select_field']; ?>
+        }
+    </style>
+
+    <style>
+        .site-branding {
+	       color: <?php echo $options['js_radio_field2']; ?>
         }
     </style>
 
