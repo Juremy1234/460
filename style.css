@@ -914,14 +914,14 @@ object {
 #page {
 	width: 60%;
 	margin: auto;
-	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom:10px;
 }
 
 /* Made changes to the header section of my website such as the title and description */
 .site-branding {
 	text-align: center;
 	color: black;
-	background-color: #FFF;
 }
 .site-branding img{
 	margin-top: 20px;
@@ -929,13 +929,47 @@ object {
 	width: 200px;
 }
 
+.site-title a {
+	color: #FFF;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	font-size: 2em;
+}
+
+.site-description {
+	color: #FFF;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	font-size: 1.5em;
+
+}
+
 /* This is for the primary section of my websites */
 
 #primary {
-	float:left;
-	max-width: 55%;
+	float:center;
+	max-width: 70%;
 	font-family: 'Open Sans', sans-serif;
-	margin-left: 20px;
+	margin: auto;
+	color: #FFF;
+}
+
+/* This centers the title in the content section */
+
+.entry-title {
+	text-align: center;
+}
+
+/* This justifies the paragraphs in the content section */
+
+.entry-content {
+	text-align: justify;
 }
 
 /* This is the sidebar to my website */

@@ -65,10 +65,11 @@ function js_settings_init() {
 	function js_radio_field_render2() { 
 		$options = get_option( 'js_options_settings' );
 		?>
-		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 1 ); ?> value="#000000" /> <label>Black (Default)</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 1 ); ?> value="#FFF" /> <label>White (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 2 ); ?> value="#000000" /> <label>Black </label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 3 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 4 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field2]" <?php if (isset($options['js_radio_field2'])) checked( $options['js_radio_field2'], 5 ); ?> value="#ffa500" /> <label>Orange</label>
 		<?php
 	}
 
@@ -92,10 +93,11 @@ function js_settings_init() {
 	function js_radio_field_render() { 
 		$options = get_option( 'js_options_settings' );
 		?>
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 1 ); ?> value="#000000" /> <label>Black (Default)</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 1 ); ?> value="#FFF" /> <label>White (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 2 ); ?> value="#000000" /> <label>Black </label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 3 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 4 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field]" <?php if (isset($options['js_radio_field'])) checked( $options['js_radio_field'], 5 ); ?> value="#ffa500" /> <label>Orange</label>
 		<?php
 	}
 
@@ -119,10 +121,11 @@ function js_settings_init() {
 	function js_radio_field_render3() { 
 		$options = get_option( 'js_options_settings' );
 		?>
-		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 1 ); ?> value="#FFFFFF" /> <label>White (Default)</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 2 ); ?> value="#800080" /> <label>Purple</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 3 ); ?> value="#0000ff" /> <label>Blue</label><br />
-		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 4 ); ?> value="#ffa500" /> <label>Orange</label>
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 1 ); ?> value="transparent" /> <label>Transparent (Default)</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 2 ); ?> value="#FFFFFF" /> <label>White </label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 3 ); ?> value="#800080" /> <label>Purple</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 4 ); ?> value="#0000ff" /> <label>Blue</label><br />
+		<input type="radio" name="js_options_settings[js_radio_field3]" <?php if (isset($options['js_radio_field3'])) checked( $options['js_radio_field3'], 5 ); ?> value="#ffa500" /> <label>Orange</label>
 		<?php
 	}
 

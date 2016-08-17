@@ -27,13 +27,13 @@
 <!-- In the below style I changed the color and font size to reflect the option the user chooses from the option page on wordpress-->
 
     <style>
-        .site-branding{
+        ..site-title{
 	       font-size: <?php echo $options['js_select_field']; ?>
         }
     </style>
 
     <style>
-        .site-branding {
+        ..site-title {
 	       color: <?php echo $options['js_radio_field2']; ?>
         }
     </style>
@@ -46,7 +46,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<img src="Dino.png" alt="Juremy Seochand">
+
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
