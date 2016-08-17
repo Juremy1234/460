@@ -352,7 +352,9 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background-image: url(20150808_200332.jpg); /* Fallback for when there is no custom background color defined. */
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 blockquote:before,
@@ -532,6 +534,9 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+
+/* Here I made changes to the menu to change the background colour, display them inline across the site, and added padding to separate them */
 .main-navigation {
 	font-family: "Times New Roman", Georgia, Serif;
 	font-size:1em;
@@ -543,10 +548,11 @@ a:active {
 	margin: 0;
 	padding-left: 0;
 	text-align: center;
-	background-color: #00cc88;
+	background-color: #20B2AA;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	color: white;
+	opacity: 0.8;
 
 }
 
@@ -901,14 +907,21 @@ object {
 	display: block;
 }
 
-/* My CSS Customizations */
+/* My media query for responsive design */
+@media screen and (max-width: 1400px){
+
+/* Here I centered my entire webpage, added a border, and changed the width */
 #page {
-	background-color: #FFFFFF;
+	width: 60%;
+	margin: auto;
+	border: 1px solid black;
 }
 
+/* Made changes to the header section of my website such as the title and description */
 .site-branding {
 	text-align: center;
 	color: black;
+	background-color: #FFF;
 }
 .site-branding img{
 	margin-top: 20px;
@@ -916,19 +929,7 @@ object {
 	width: 200px;
 }
 
-#colophon {
-	padding-top: 20px;
-	background-color: #00cc88;
-
-}
-
-.site-info {
-	background-color: #00cc88;
-	padding-top:50px;
-	padding-bottom: 50px;
-	margin-top: 20px;
-	padding-left: 10px;
-}
+/* This is for the primary section of my websites */
 
 #primary {
 	float:left;
@@ -937,6 +938,7 @@ object {
 	margin-left: 20px;
 }
 
+/* This is the sidebar to my website */
 #secondary {
     float: right;
     padding: 0 0 0 20px;
@@ -950,4 +952,22 @@ object {
 
 }
 
+/* This is my footer section */
+.site-info {
+	background-color: #20B2AA;
+	opacity: 0.8;
+	padding-top:50px;
+	padding-bottom: 50px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
 
+#colophon {
+	padding-top: 20px;
+	background-color: #20B2AA;
+	max-width: 100%;
+	opacity: 0.8;
+
+}
+
+}
