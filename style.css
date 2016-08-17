@@ -908,8 +908,6 @@ object {
 	display: block;
 }
 
-/* My media query for responsive design */
-@media screen and (max-width: 1400px){
 
 /* Here I centered my entire webpage, added a border, and changed the width */
 #page {
@@ -1053,4 +1051,132 @@ object {
 	width: 100%;
 }
 
+/* My media query for responsive design */
+@media screen and (max-width: 1000px){
+
+/* Here I centered my entire webpage, added a border, and changed the width */
+#page {
+	width: 60%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom:10px;
 }
+
+/* Made changes to the header section of my website such as the title and description */
+.site-branding {
+	text-align: center;
+	color: black;
+}
+.site-branding img{
+	margin-top: 20px;
+	height: 200px; 
+	width: 200px;
+}
+
+.site-title a {
+	color: #FFF;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	font-size: 2em;
+}
+
+.site-description {
+	color: #FFF;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	font-size: 1.5em;
+
+}
+
+/* This is for the primary section of my websites */
+
+#primary {
+	text-align: center;	
+	max-width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: #FFF;
+}
+
+/* This centers the title in the content section */
+
+.entry-title {
+	text-align: center;
+}
+
+/* This justifies the paragraphs in the content section */
+
+.entry-content {
+	text-align: justify;
+}
+
+/* This is my footer section */
+.site-info {
+	background-color: #20B2AA;
+	opacity: 0.8;
+	padding-top:50px;
+	padding-bottom: 50px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+#colophon {
+	padding-top: 20px;
+	background-color: #20B2AA;
+	max-width: 100%;
+	opacity: 0.8;
+
+}
+
+/* Adding customizations to my custom query */
+.custom-hp {
+	background-color: #20B2AA;
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+
+.custom-hp h2 {
+	color: #FFF;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	font-size: 2em;
+	text-align: center;
+	padding-top:15px;
+	padding-bottom:15px;
+
+}
+
+.customq {
+	margin:auto;
+	background-color: #20B2AA;
+	width: 100%;
+	height: 100%
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+.customq img {
+	clear: both;
+	width: 100%;
+}
+
+.customq  {
+	width: 100%;
+}
+
+}
+
