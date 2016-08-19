@@ -32,17 +32,23 @@ portfolio includes support for Infinite Scroll in Jetpack.
 = 1.0 - May 12 2015 =
 * Initial release
 
-== Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-
 == Options==
 1. In your admin panel, go to Appearance > Themes Options.
 2. Read through each option, click desired settings. 
 3. Click Save Changes to apply your changes right away.
 
+== Custom Query ==
 
+1. In your admin panel, go to Posts > Add New.
+2. Enter desired Title and Content.
+3. In Category > Click"custom-homepage".
+4. In Featured Image > Click "Set featured image" > Upload Image to add a thumbnail.
+4. Click Publish to add thumbnail and excerpt to custom homepage. 
+
+== Credits ==
+
+* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
 
 
