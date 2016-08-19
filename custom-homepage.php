@@ -57,9 +57,12 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<div class='custom-hp'>
-	<h2>Top Posts</h2>
-<!-- Adding my custom query --> <?php
+
+<!-- Added a div around my custom query -->
+<div class='custom-hp'><!-- .custom-hp -->
+	<h2>Top Posts</h2> <!-- Heading for custom query -->
+<?php
+			//Custom query is below, It will show 3 posts at a time, that have to category name "custom-homepage"
 			$args = array('showposts' => 3, 'category_name' => 'custom-homepage');
 				$my_query = new WP_Query($args);
 				?>
@@ -67,15 +70,16 @@ get_header(); ?>
 				//	This query shows posts
 				if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 				?>
-				<div class="customq">
+				<!-- Added a div around my thumbnail excerpt section-->
+				<div class="customq"><!-- .customq -->
 				<?php
+				//Here I coded if there is a featured image or thumbnail  it will be displayed above the excerpt or description
 				if ( has_post_thumbnail()){ the_post_thumbnail(); }
-				the_excerpt(); //displays excerpts
+				the_excerpt(); 
 					?>
 				</div>
 				<?php endwhile; endif; wp_reset_query(); ?>
 </div> 
 
 <?php
-get_sidebar();
 get_footer();
