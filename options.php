@@ -20,6 +20,8 @@ function js_settings_init() {
 		echo 'In the section below, choose the settings you would like to display on your web page.';
 	}
 
+//Option 1: Added radio field
+
 	add_settings_field( 
 		'js_radio_field2', 
 		'Choose a font colour for title', 
@@ -27,6 +29,7 @@ function js_settings_init() {
 		'theme_options', 
 		'js_options_page_section'  
 	);
+//Option 2: Added select field
 
 	add_settings_field( 
 		'js_select_field', 
@@ -35,6 +38,7 @@ function js_settings_init() {
 		'theme_options', 
 		'js_options_page_section'  
 	);
+//Option 3: Added radio field
 
 	add_settings_field( 
 		'js_radio_field', 
@@ -44,6 +48,8 @@ function js_settings_init() {
 		'js_options_page_section'  
 	);
 
+//Option 4: Added select field
+
 	add_settings_field( 
 		'js_select_field2', 
 		'Choose font size for page content', 
@@ -51,6 +57,8 @@ function js_settings_init() {
 		'theme_options', 
 		'js_options_page_section'  
 	);
+
+//Option 5: Added radio field
 
 		add_settings_field( 
 		'js_radio_field3', 
@@ -129,6 +137,7 @@ function js_settings_init() {
 		<?php
 	}
 
+//This code inserts the options page into wordpress
 
 	function my_theme_options_page(){ 
 		?>
